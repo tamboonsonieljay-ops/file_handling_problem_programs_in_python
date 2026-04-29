@@ -1,2 +1,2 @@
-file = open("numbers.txt")
-print(file.read())
+with open("numbers.txt", "r") as file:
+    numbers = file.read().split()
