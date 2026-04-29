@@ -1,2 +1,5 @@
-with open("numbers.txt", "r") as file:
-    numbers = file.read().split()
+file = open("numbers.txt", "r")
+
+for line in file:
+    print(line)
+file.close()
