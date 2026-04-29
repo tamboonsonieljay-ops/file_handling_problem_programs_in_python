@@ -1,13 +1,14 @@
 def write_user_input():
+    print("Enter lines about your life (type 'STOP' to finish):")
     lines = []
 
-    print("Enter 5 lines about your life:")
-
-    for i in range(5):
-        line = input(f"Line {i+1}: ")
+    while True:
+        line = input()
+        if line.upper() == "STOP":
+            break
         lines.append(line)
 
-    with open("mylife.txt", "w") as file:
+    with open("mylife.txt", "a") as file:
         for line in lines:
             file.write(line + "\n")
 
